@@ -1,0 +1,46 @@
+teleport-delay: 3 # время в секундах для телепорта (или 0 что бы убарть)
+move-cancels-teleport: true # можно ли двигаться пока идет отчет
+owner-only: true # может ли тольок лидер ставить хомы
+
+# лимит хомов для определенного уровня клана
+home-limits:
+  1: 1
+  2: 3
+  3: 3
+  5: 4
+  6: 5
+
+default-home-limit: 1
+
+messages:
+  no-clan: "<#C25252>✘ <gray>┃ <white>Вы <#C25252>не <white>состоите в клане"
+  no-permission: "<#C25252>✘ <gray>┃ <white>У вас <#C25252>нет прав <white>для этого действия"
+
+  sethome:
+    usage: "<#FACC15>★ <gray>┃ <white>Использование: <#FACC15>/clan sethome [название]"
+    invalid-name: "<#C25252>✘ <gray>┃ <white>Некорректное название — только <#C25252>буквы<white>, <#C25252>цифры<white>, <#C25252>_ <white>и <#C25252>-"
+    limit-reached: "<#C25252>✘ <gray>┃ <white>Достигнут лимит домов — <#C25252>{current}<gray>/<#C25252>{limit}"
+    success: "<#52C25A>✔ <gray>┃ <white>Дом <#52C25A>{home} <white>установлен"
+    updated: "<#52C25A>✔ <gray>┃ <white>Дом <#52C25A>{home} <white>обновлён"
+
+  home:
+    no-homes: "<#C25252>✘ <gray>┃ <white>У клана нет домов. Установите: <#FACC15>/clan sethome <название>"
+    not-found: "<#C25252>✘ <gray>┃ <white>Дом <#FACC15>{home} <#C25252>не найден"
+    world-not-found: "<#C25252>✘ <gray>┃ <white>Мир <#FACC15>{world} <#C25252>не найден"
+
+    teleport-countdown: "<#FACC15>⌛ <gray>┃ <white>Телепортация к <#FACC15>{home} <white>через <#FACC15>{delay}с<white>. Не двигайтесь"
+    teleported: "<#52C25A>✔ <gray>┃ <white>Вы телепортированы к дому <#52C25A>{home}"
+    teleport-cancelled: "<#C25252>✘ <gray>┃ <white>Телепортация отменена — вы пошевелились"
+
+    list:
+      - ""
+      - "<gray>┃ <gold>Дома клана {clan}"
+      - "<gray>┃ <white>Слоты: <#FACC15>{current}<gray>/<white><#FACC15>{limit}"
+      - ""
+      - "<gray>┃ <gray>• <#FACC15>{home} <dark_gray>— <white>{world} <gray>({x}, {y}, {z})"
+      - ""
+
+  delhome:
+    usage: "<#FACC15>★ <gray>┃ <white>Использование: <#FACC15>/clan delhome [название]"
+    success: "<#52C25A>✔ <gray>┃ <white>Дом <#52C25A>{home} <white>удалён"
+    not-found: "<#C25252>✘ <gray>┃ <white>Дом <#FACC15>{home} <#C25252>не найден"

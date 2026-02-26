@@ -1,0 +1,4 @@
+name: ClanHomeAddon
+version: '${project.version}'
+main: ua.vdev.clanhomeaddon.ClanHomeAddon
+author: Tox_8729
